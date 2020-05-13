@@ -29,10 +29,10 @@ var orm =
 				
 	},
 
-	//updateOne()
-	updateOne: function(burgerID, callback)
+    
+    updateOne: function(ID, callback)
 	{
-		connection.query('UPDATE burgers SET ? WHERE ?', [{devoured: true}, {id: burgerID}],
+		connection.query('UPDATE burgers SET ? WHERE ?', [{devoured: true}, {ID: ID}],
 			function(err, result)
 			{
 				if (err) throw err;
